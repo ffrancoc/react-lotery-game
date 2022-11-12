@@ -1,10 +1,19 @@
+import { Routes } from "react-router-dom";
+import { Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import "./App.css";
+import StartScreen from "./components/StartScreen";
+import LoteryProvider from "./provider/LoteryProvider";
 
 function App() {
   return (
-    <div>
-      <p>React Lotery Game</p>
-    </div>
+    <LoteryProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<StartScreen />} />
+        </Routes>
+      </BrowserRouter>
+    </LoteryProvider>
   );
 }
 
