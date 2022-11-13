@@ -1,12 +1,22 @@
+import { useEffect } from "react";
 import { useContext } from "react";
+import { useNavigate } from "react-router";
 import { LoteryContext } from "../provider/LoteryProvider";
 import "./StartScreen.css";
 
 function StartScreen() {
-  const { setGameStep } = useContext(LoteryContext);
+  const navigate = useNavigate();
+  const { gameStep, setGameStep } = useContext(LoteryContext);
 
+  // Resetar variable gameStep al renderizar el componente
+  useEffect(() => {
+    setGameStep(0);
+  }, []);
+
+  // Evento para cambiar a siguiente ventana
   const onPressStart = () => {
-    setGameStep(1);
+    setGameStep(gameStep + 1);
+    navigate("/selection");
   };
 
   return (
