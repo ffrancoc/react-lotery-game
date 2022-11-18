@@ -6,24 +6,24 @@ import "./StartScreen.css";
 
 function StartScreen() {
   const navigate = useNavigate();
-  const { gameStep, setGameStep } = useContext(LoteryContext);
+  const { gameScreen, setGameScreen } = useContext(LoteryContext);
 
-  // Resetar variable gameStep al renderizar el componente
   useEffect(() => {
-    setGameStep(0);
+    setGameScreen(0);
   }, []);
 
-  // Evento para cambiar a siguiente ventana
-  const onPressStart = () => {
-    setGameStep(gameStep + 1);
+  const onStartGame = () => {
+    setGameScreen(gameScreen + 1);
     navigate("/selection");
   };
 
   return (
     <div className="start-screen">
-      <h1>React Lotery Game</h1>
-      <h2>&#40; Start Screen &#41;</h2>
-      <button onClick={onPressStart}>Press Start</button>
+      <div className="card">
+        <h1>React Lotery Game</h1>
+        <h2>&#40; Pagina de Inicio &#41;</h2>
+        <button onClick={onStartGame}>Iniciar Juego</button>
+      </div>
     </div>
   );
 }

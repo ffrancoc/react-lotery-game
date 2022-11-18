@@ -1,0 +1,30 @@
+.carton-player {
+  background-color: dodgerblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 0px 10px 0px 10px;
+  box-shadow: 1px 2px 2px #000;
+  height: 481px;
+}
+
+.carton-player > h2 {
+  margin-bottom: 20px;
+}
+
+.carton-player > .cards {
+  width: 200px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+}
+
+.carton-player > .winner-pill {
+  background-color: gold;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  border: 2px solid #000;
+}

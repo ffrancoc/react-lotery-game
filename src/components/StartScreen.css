@@ -5,29 +5,45 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #388e3c;
+  /* background-color: #2389a8; */
+  background: linear-gradient(45deg, #daad1d80 25%, transparent 21%),
+    linear-gradient(315deg, #daad1d80 25%, transparent 21%),
+    linear-gradient(45deg, #daad1d 10%, transparent 11%),
+    linear-gradient(315deg, #daad1d 10%, transparent 11%),
+    linear-gradient(135deg, #daad1d80 25%, transparent 21%),
+    linear-gradient(225deg, #daad1d80 25%, transparent 21%),
+    linear-gradient(135deg, #daad1d 10%, transparent 11%),
+    linear-gradient(225deg, #daad1d 10%, transparent 11%),
+    radial-gradient(#daad1d 20%, transparent 21%);
+  background-size: 3em 3em;
+  background-color: #f3de40;
+  opacity: 1;
 }
 
-.start-screen > h1,
-h1,
-button {
-  margin: 10px 0px 10px 0px;
+.start-screen > .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 1px 2px 2px #000;
 }
 
-.start-screen > button {
-  width: 200px;
-  height: 50px;
+.start-screen > .card > button {
+  padding: 10px;
   border-radius: 50px;
   font-size: large;
   font-weight: bold;
   background-color: #000;
   color: #fff;
+  margin-top: 10px;
 }
 
-.start-screen > button:hover {
+.start-screen > .card > button:hover {
   transform: scale(0.95);
 }
 
-.start-screen > button:active {
-  color: gold;
+.start-screen > .card > button:active {
+  color: #daad1d;
 }

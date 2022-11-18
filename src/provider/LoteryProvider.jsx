@@ -4,19 +4,21 @@ import { useState } from "react";
 export const LoteryContext = createContext();
 
 export default function LoteryProvider({ children }) {
-  const [gameStep, setGameStep] = useState(0);
-  const [namePlayerA, setNamePlayerA] = useState("");
-  const [namePlayerB, setNamePlayerB] = useState("");
-  const [cartonPlayerA, setCartonPlayerA] = useState(0);
-  const [cartonPlayerB, setCartonPlayerB] = useState(0);
+  const [gameScreen, setGameScreen] = useState(0);
+  const [namePlayerA, setNamePlayerA] = useState("Player A");
+  const [namePlayerB, setNamePlayerB] = useState("Player B");
+  const [cartonPlayerA, setCartonPlayerA] = useState("0");
+  const [cartonPlayerB, setCartonPlayerB] = useState("1");
   const [playerA, setPlayerA] = useState({});
   const [playerB, setPlayerB] = useState({});
+  const [loteryCards, setLoteryCards] = useState([]);
+  const [unselectedCards, setUnselectedCards] = useState([]);
 
   return (
     <LoteryContext.Provider
       value={{
-        gameStep,
-        setGameStep,
+        gameScreen,
+        setGameScreen,
         namePlayerA,
         setNamePlayerA,
         namePlayerB,
@@ -29,6 +31,10 @@ export default function LoteryProvider({ children }) {
         setPlayerA,
         playerB,
         setPlayerB,
+        loteryCards,
+        setLoteryCards,
+        unselectedCards,
+        setUnselectedCards,
       }}
     >
       {children}

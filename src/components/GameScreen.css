@@ -1,0 +1,112 @@
+.game-screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #1cd95f80 25%, transparent 21%),
+    linear-gradient(315deg, #1cd95f80 25%, transparent 21%),
+    linear-gradient(45deg, #1cd95f 10%, transparent 11%),
+    linear-gradient(315deg, #1cd95f 10%, transparent 11%),
+    linear-gradient(135deg, #1cd95f80 25%, transparent 21%),
+    linear-gradient(225deg, #1cd95f80 25%, transparent 21%),
+    linear-gradient(135deg, #1cd95f 10%, transparent 11%),
+    linear-gradient(225deg, #1cd95f 10%, transparent 11%),
+    radial-gradient(#1cd95f 20%, transparent 21%);
+  background-size: 3em 3em;
+  background-color: #23ff44;
+  opacity: 1;
+}
+
+.game-screen > .container {
+  height: 500px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.game-screen > .container > .center-view {
+  width: 350px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0px 10px 0px 10px;
+  box-shadow: 1px 2px 2px #000;
+}
+
+.game-screen > .container > .center-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.game-screen > .container > .center-view > .game-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.game-screen > .container > .center-view > .game-controls > button {
+  background-color: #000;
+  color: #fff;
+  font-size: large;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.game-screen > .container > .center-view > .game-controls > button:hover {
+  transform: scale(0.95);
+}
+
+.game-screen > .container > .center-view > .game-controls > button:active {
+  color: #23ff44;
+}
+
+.game-screen > .container > .center-view > .lotery-cards {
+  display: grid;
+  grid-template-columns: repeat(9, auto);
+  justify-content: center;
+  gap: 5px;
+  padding: 10px;
+}
+
+/* .game-screen-controls {
+  display: flex;
+  background-color: #fff;
+}
+
+.game-screen > .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-screen > .container > .center-view {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.game-screen > .container > .lotery-cards {
+  display: grid;
+  grid-template-columns: repeat(9, auto);
+  justify-content: center;
+  gap: 5px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 1px 2px 2px #000;
+  border-radius: 5px;
+}
+
+.game-screen > .container > .lotery-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: dodgerblue;
+  flex-grow: 1;
+  margin: 0px 5px 0px 5px;
+} */
